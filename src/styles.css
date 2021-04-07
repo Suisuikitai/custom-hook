@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans JP", sans-serif;
+  box-sizing: border-box;
+  color: rgba(45, 45, 45, 0.87);
+  font-size: 16px;
+  line-height: 1.8rem;
+}
+
+.App {
+  background: #eef5ee;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 400px;
+  margin: 24px;
+}
+
+button {
+  border: none;
+  padding: 4px 8px;
+  width: 100%;
+
+  /* https://neumorphism.io/#eef5ee */
+  border-radius: calc(14px * 20);
+  background: #eef5ee;
+  box-shadow: 4px 4px 8px #cad0ca, -4px -4px 8px #ffffff;
+  text-shadow: 1px 1px 0 #fff;
+
+  outline-color: #cad0ca;
+  outline-width: thin;
+}
+
+/* https://codepen.io/swapnet/pen/QWwPVwE */
+
+input {
+  border: 0;
+  outline: 0;
+  font-size: 14px;
+  border-radius: calc(14px * 20);
+  padding: 14px;
+  background-color: #ebecf0;
+  text-shadow: 1px 1px 0 #fff;
+
+  box-shadow: inset 2px 2px 5px #cad0ca, inset -5px -5px 10px #fff;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  appearance: none;
+  -webkit-appearance: none;
+
+  margin-bottom: 24px;
+}
+
+input:focus {
+  box-shadow: inset 1px 1px 2px #cad0ca, inset -1px -1px 2px #fff;
+}

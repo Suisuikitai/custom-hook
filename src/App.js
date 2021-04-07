@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./styles.css";
 
-function App() {
+export default function App() {
+  const [email, setEmail] = useState("");
+  const handleEmail = (e) => setEmail(e.target.value);
+
+  const [password, setPassword] = useState("");
+  const handlePassword = (e) => setPassword(e.target.value);
+
+  const [name, setName] = useState("");
+  const handleName = (e) => setName(e.target.value);
+
+  const [city, setCity] = useState("");
+  const handleCity = (e) => setCity(e.target.value);
+
+  const submit = () => alert(`email: ${email}, password: ${password}`);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+        <input placeholder="email" value={email} onChange={handleEmail} />
+        <input
+          placeholder="password"
+          value={password}
+          onChange={handlePassword}
+        />
+        <input placeholder="name" value={name} onChange={handleName} />
+        <input placeholder="city" value={city} onChange={handleCity} />
+        <button onClick={submit} type="button">
+          login
+        </button>
+      </div>
     </div>
   );
 }
-
-export default App;
