@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./styles.css";
 
 export default function App() {
@@ -33,4 +33,13 @@ export default function App() {
       </div>
     </div>
   );
+}
+
+function useInput(initial){
+  const [input, setInput] = useState(initial);
+
+  //返したいものを返して良い(返り値の型とか考えなくて良い)
+  //useStateを使用する単なる関数を定義すると捉える
+  //カスタムフック === フックを使った便利関数
+
 }
